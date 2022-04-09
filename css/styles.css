@@ -1,0 +1,277 @@
+:root {
+ --header-main-color: #212121;
+ --header-secondary-color: #757575;
+ 
+ --main-text-color: #757575;
+ --title-text-color: #212121;
+ --accent-color: #2196F3;
+ --main-background-color: #ffffff;
+ --secondary-background-color: #F5F4FA;
+ --main-button-color: #212121;
+ --sec-button-color: #ffffff;
+
+ --footer-background-color: #2F303A;
+ --main-footer-color: #ffffff;
+ --secondary-footer-color: rgba(255, 255, 255, 0.6);
+
+}
+
+/* 
+USED-COLORS:
+h1 color, main-bgc: #FFFFFF;
+title-text-color: #212121;
+main-text-color: #757575;
+accent color: #2196F3;
+state-btn-bgc: #188CE8;
+sec-bgc: #F5F4FA;
+
+footer-mail-tel: #FFFFFF 60 % / rgba(255,255,255,0.6);
+footer-background-color: #2F303A;
+*/
+
+body {
+    color: var(--main-text-color);
+    background-color: var(--main-background-color);
+    font-family: Roboto, sans-serif;
+}
+
+.link {
+    text-decoration: none;
+}
+/* need to check if it's correctly  */
+.header .link:hover,
+.header .link:focus {
+    color: var(--accent-color)
+}
+
+
+.list {
+    list-style: none;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
+/* --------HEADER-------- */
+
+.header-logo,
+.footer-logo {
+    color: var(--accent-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.header-logo .accent {
+    color: var(--header-main-color);
+}
+.footer-logo .accent {
+    color: #ffffff;
+}
+/* header-link,-mail,-tel have the same font-info*/
+.header-link {
+    color: var(--header-main-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color)
+}
+.header-list .link.current {
+   color: var(--accent-color);
+}
+
+
+.header-mail {
+    color: var(--header-secondary-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em; 
+}
+.header-tel {
+    color: var(--header-secondary-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em
+}
+
+
+/* ---------HERO--------- */
+/*do not mix with...*/
+.hero {
+    background-color: #2F303A;
+}
+.hero-title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero-button {
+    color: #ffffff;
+    background-color: var(--accent-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    /* align-items: center; */
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #188CE8;
+}
+
+/* ---------FEATURES-----------*/
+
+/* .features-title & .about-title have the same fotn-info except text-align: center;*/
+.features-title {
+    color: var(--title-text-color);
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+
+.feature-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* ----------ABOUT------------- */
+
+/* .about-top-title & .team-top-title are the same. 
+But if using "top-title", then the next selector won't work*/
+.about-top-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+}
+
+/* ------------OUR-TEAM------------- */
+
+.team {
+    background-color: var(--secondary-background-color);
+}
+
+.team-top-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.team-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    /* text-align: center; */
+    letter-spacing: 0.03em;
+}
+
+.team-text {
+    font-size: 16px;
+    line-height: 1.19;
+    /* identical to box height */
+    /* text-align: center; */
+    letter-spacing: 0.03em;
+}
+
+/* ------WORKS------- */
+
+.button{
+    color: var(--main-button-color);
+    background-color: var(--secondary-background-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+.button:hover,
+.button:focus {
+    color: var(--sec-button-color);
+    background-color: var(--accent-color)
+}
+.portflio-filter .button.current {
+    color: var(--sec-button-color);
+    background-color: var(--accent-color);
+}
+
+.works-title {
+    color: var(--title-text-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.works-text {
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}
+
+
+/* -----------FOOTER----------- */
+
+.footer {
+    background-color: var(--footer-background-color);
+    
+}
+
+.footer-address .link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+.footer-address .link:hover,
+.footer-address .link:focus {
+    color: var(--accent-color);
+}
+
+.footer-state-link {
+    color: #ffffff;
+}
+
+.footer-mail-link,
+.footer-tel-link {
+    color: var(--secondary-footer-color);
+}
